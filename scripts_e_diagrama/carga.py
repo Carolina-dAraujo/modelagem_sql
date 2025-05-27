@@ -68,7 +68,7 @@ def load_csvs():
     tabelas = {}
 
     # 1. localidade
-    tabelas['localidade'] = pd.read_csv('localidade.csv', dtype={
+    tabelas['localidade'] = pd.read_csv('../tabelas_normalizadas/localidade.csv', dtype={
         'id_municipio': 'Int64',
         'populacao_urbana': float,
         'populacao_urbana_residente_agua': float,
@@ -83,7 +83,7 @@ def load_csvs():
     })
 
     # 2. receitas
-    tabelas['receitas'] = pd.read_csv('receitas.csv', dtype={
+    tabelas['receitas'] = pd.read_csv('../tabelas_normalizadas/receitas.csv', dtype={
         'ano': 'Int64',
         'id_municipio': 'Int64',
         'receita_operacional_direta': float,
@@ -96,7 +96,7 @@ def load_csvs():
     })
 
     # 3. despesas
-    tabelas['despesas'] = pd.read_csv('despesas.csv', dtype={
+    tabelas['despesas'] = pd.read_csv('../tabelas_normalizadas/despesas.csv', dtype={
         'ano': 'Int64',
         'id_municipio': 'Int64',
         'despesa_pessoal': float,
@@ -123,7 +123,7 @@ def load_csvs():
     })
 
     # 4. investimentos
-    tabelas['investimentos'] = pd.read_csv('investimentos.csv', dtype={
+    tabelas['investimentos'] = pd.read_csv('../tabelas_normalizadas/investimentos.csv', dtype={
         'ano': 'Int64',
         'id_municipio': 'Int64',
         'investimento_agua_prestador': float,
@@ -150,7 +150,7 @@ def load_csvs():
     })
 
     # 5. indices
-    tabelas['indices'] = pd.read_csv('indices.csv', dtype={
+    tabelas['indices'] = pd.read_csv('../tabelas_normalizadas/indices.csv', dtype={
         'ano': 'Int64',
         'id_municipio': 'Int64',
         'indice_agua_ligacao': float,
@@ -164,7 +164,7 @@ def load_csvs():
     })
 
     # 6. infraestrutura
-    tabelas['infraestrutura'] = pd.read_csv('infraestrutura.csv', dtype={
+    tabelas['infraestrutura'] = pd.read_csv('../tabelas_normalizadas/infraestrutura.csv', dtype={
         'id_municipio': 'Int64',
         'extensao_rede_agua': float,
         'extensao_rede_esgoto': float,
